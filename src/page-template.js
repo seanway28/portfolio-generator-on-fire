@@ -55,7 +55,7 @@ const generateProjects = projectsArr => {
 };
 
 module.exports = templateData => {
-    console.log(templatedata);
+    console.log(templateData);
 
     const { projects, about, ...header } = templateData;
 

@@ -1,8 +1,8 @@
 
 // Site generator
 const inquirer = require('inquirer');
-const { writeFile, copyFile } = require('./index.js');
-const generatePage = require('./potential-enigma/Develop/src/page-template');
+// const { writeFile, copyFile } = require('./index.js');
+const generatePage = require('./src/page-template');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -126,27 +126,24 @@ return inquirer.prompt([
 }
 
 ])
-.then(projectData => {
-    portfolioData.projects.any(projectData);
-    if (projectData.confirmAddProject) {
-        return promptProject(portfolioData);
-    } else {
-        return portfolioData;
+// .then(projectData => {
+//     portfolioData.projects.push(projectData);
+//     if (projectData.confirmAddProject) {
+//         return promptProject(portfolioData);
+//     } else {
+//         return portfolioData;
     }
-});
-}
+
 
 promptUser()
 .then(promptProject)
 .then(portfolioData => {
-    return generatePage(portfolioDat);
+    //return generatePage(portfolioData);
     })
-    .then(pageHTML => {
-        return writeFile(pagehTML);
-    })
-    .then(writeFileResponse => {
-        return copyFile();
-    })
+    // .then(pageHTML => {
+    //     return writeFile(pageHTML);
+    // .then(writeFileResponse => {
+    //     return copyFile();
     .then(copyFileResponse => {
         console.log(copyFileResponse);
     })
