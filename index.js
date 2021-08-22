@@ -69,12 +69,12 @@ return inquirer.prompt([
     {
         type: 'input',
         name: 'name',
-        message: 'What is the name of your projects?',
+        message: 'What is the name of your project?',
         validate: projectInput => {
             if (projectInput) {
                 return true;
             } else {
-                console.log('Please enter the name of your projects...');
+                console.log('Please enter the name of your projects.');
                 return false;
             }
         }
@@ -83,12 +83,12 @@ return inquirer.prompt([
 
         type: 'input',
         name: 'description',
-        message: 'Provide a description of the project (Required)',
+        message: 'Provide a description of the project. (Required)',
         validate: descInput => {
             if (descInput) {
                 return true;
             } else {
-                console.log('Please enter a project description:');
+                console.log('Please enter a project description.');
                 return false;
             }
         }
@@ -96,7 +96,7 @@ return inquirer.prompt([
 {
         type: 'checkbox',
         name: 'languages',
-        message: 'What did you build this project with? (Check all that applu)',
+        message: 'What did you build this project with? (Check all that apply)',
         choices: ['JavaScipt', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
 },
 {
